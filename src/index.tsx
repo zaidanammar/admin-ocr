@@ -1,14 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+import AdminLayout from './layout/AdminLayout';
+// import Auth from './layouts/Auth';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <BrowserRouter>
+    <Switch>
+      {/* add routes with layouts */}
+      <Route path="/" component={AdminLayout} />
+      {/* <Route path="/auth" component={Auth} /> */}
+      {/* add redirect for first page */}
+      <Redirect from="*" to="/" />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
