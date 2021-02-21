@@ -20,6 +20,7 @@ import Pic from "../views/admin/Pic";
 import Superpic from "../views/admin/Superpic";
 import Admin from "../views/admin/Admin";
 import SuperAdmin from "../views/admin/SuperAdmin";
+import Profile from "../views/admin/Profile";
 // import Maps from "views/admin/Maps.js";
 // import Settings from "views/admin/Settings.js";
 // import Tables from "views/admin/Tables.js";
@@ -42,6 +43,7 @@ export default function AdminLayout() {
             <Route path="/admin/superpic" exact component={Superpic} />
             <Route path="/admin/admin" exact component={Admin} /> 
             <Route path="/admin/superAdmin" exact component={SuperAdmin} />
+            <Route path="/admin/profile" exact component={Profile} />
             {/* <Route path="/admin/maps" exact component={Maps} />
             <Route path="/admin/settings" exact component={Settings} />
             <Route path="/admin/tables" exact component={Tables} /> */}

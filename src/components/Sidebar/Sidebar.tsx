@@ -27,13 +27,13 @@ export default function Sidebar() {
             <div className="flex-row justify-center ml-2 py-4">
               <Link
                 className="md:block text-left md:pb-2 text-gray-700 whitespace-nowrap text-base  font-bold"
-                to="/profile"
+                to="/admin/profile"
               >
                 Ican Natawijaya
           </Link>
               <Link
                 className="md:block text-left md:pb-2 text-gray-700 whitespace-nowrap text-xs font-normal"
-                to="/profile"
+                to="/admin/profile"
               >
                 Admin
           </Link>
@@ -70,7 +70,7 @@ export default function Sidebar() {
               </div>
             </div>
             {/* Form */}
-            <form className="mt-6 mb-4 md:hidden">
+            {/* <form className="mt-6 mb-4 md:hidden">
               <div className="mb-3 pt-0">
                 <input
                   type="text"
@@ -78,7 +78,7 @@ export default function Sidebar() {
                   className="px-3 py-2 h-12 border border-solid  border-gray-600 placeholder-gray-400 text-gray-700 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
                 />
               </div>
-            </form>
+            </form> */}
 
             {/* Divider */}
             <hr className="mb-2 md:min-w-full" />
@@ -86,27 +86,6 @@ export default function Sidebar() {
             {/* Navigation */}
 
             <ul className="md:flex-col md:min-w-full flex flex-col list-none">
-              {/* <li className="items-center py-3">
-                <Link
-                  className={
-                    "text-xs font-normal " +
-                    (window.location.href.indexOf("/admin/dashboard") !== -1
-                      ? "text-blue-500 hover:text-blue-600"
-                      : "text-gray-800 hover:text-gray-600")
-                  }
-                  to="/admin/dashboard"
-                >
-                  <i
-                    className={
-                      "fas fa-tv mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/dashboard") !== -1
-                        ? "opacity-75"
-                        : "text-gray-400")
-                    }
-                  ></i>{" "}
-                  Dashboard
-                </Link>
-              </li> */}
 
               <li className="items-center py-3">
                 <Link
