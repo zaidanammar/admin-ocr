@@ -25,13 +25,20 @@ import Profile from "../views/admin/Profile";
 // import Settings from "views/admin/Settings.js";
 // import Tables from "views/admin/Tables.js";
 
+//components
+
+import HeaderStats from '../components/headers/HeaderStats'
+
 export default function AdminLayout() {
   return (
     <>
       <Sidebar />
-      <div className="md:ml-64 bg-green-200">
- 
-        {/* <div className="mx-auto w-full bg-yellow-600"> */}
+      <div className="relative md:ml-64 h-screen bg-gray-100">
+        {/* header */}
+        <HeaderStats />
+
+        <div className="px-4 md:px-10 mx-auto w-full mt-5">
+          <h1 className="mb-5 text-blue-900">tes/admin</h1>
           <Switch>
             <Route path="/admin/dashboard" exact component={Dashboard} />
             <Route path="/admin/pengeluaran" exact component={Pengeluaran} />
@@ -41,7 +48,7 @@ export default function AdminLayout() {
             <Route path="/admin/driver" exact component={Driver} />
             <Route path="/admin/pic" exact component={Pic} />
             <Route path="/admin/superpic" exact component={Superpic} />
-            <Route path="/admin/admin" exact component={Admin} /> 
+            <Route path="/admin/admin" exact component={Admin} />
             <Route path="/admin/superAdmin" exact component={SuperAdmin} />
             <Route path="/admin/profile" exact component={Profile} />
             {/* <Route path="/admin/maps" exact component={Maps} />
@@ -49,9 +56,9 @@ export default function AdminLayout() {
             <Route path="/admin/tables" exact component={Tables} /> */}
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
-     
+
         </div>
-      {/* </div> */}
+      </div>
     </>
   );
 }
