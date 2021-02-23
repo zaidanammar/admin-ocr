@@ -13,10 +13,10 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       {/* add routes with layouts */}
-      <Route path="/" component={AdminLayout} />
+      <Route path="/admin" component={AdminLayout} />
       {/* <Route path="/auth" component={Auth} /> */}
       {/* add redirect for first page */}
-      <Redirect from="*" to="/" />
+      <Redirect from="*" to="/admin/dashboard" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")

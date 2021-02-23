@@ -10,28 +10,20 @@ export default function Sidebar() {
     <>
       <nav className="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-no-wrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6">
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-no-wrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
-          {/* Toggler */}
-          {/* <button
-            className="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
-            type="button"
-            onClick={() => setCollapseShow("bg-white m-2 py-3 px-6")}
-          >
-            <i className="fas fa-bars"></i>
-          </button> */}
-          {/* Brand */}
+         
           <div className="flex items-center w-56">
             <div className="flex w-14 h-14">
               <img className="" src="https://cdn.discordapp.com/attachments/798894344962441267/812754976102285322/pngaaa.com-864976.png" alt="foto profile" />
             </div>
             <div className="flex-row justify-center ml-2 py-4">
               <Link
-                className="md:block text-left md:pb-2 text-gray-700 whitespace-nowrap text-base  font-bold"
+                className="md:block text-left text-gray-700 whitespace-nowrap text-base  font-bold"
                 to="/admin/profile"
               >
                 Ican Natawijaya
           </Link>
               <Link
-                className="md:block text-left md:pb-2 text-gray-700 whitespace-nowrap text-xs font-normal"
+                className="md:block text-left text-gray-700 whitespace-nowrap text-xs font-normal"
                 to="/admin/profile"
               >
                 Admin
@@ -68,16 +60,6 @@ export default function Sidebar() {
                 </div>
               </div>
             </div>
-            {/* Form */}
-            {/* <form className="mt-6 mb-4 md:hidden">
-              <div className="mb-3 pt-0">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  className="px-3 py-2 h-12 border border-solid  border-gray-600 placeholder-gray-400 text-gray-700 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
-                />
-              </div>
-            </form> */}
 
             {/* Divider */}
             <hr className="mb-2 md:min-w-full" />
