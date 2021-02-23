@@ -1,6 +1,14 @@
 import React from "react";
+import { useHistory, useRouteMatch } from "react-router-dom";
 
 export default function ProfileCard() {
+  const history = useHistory()
+  const { url } = useRouteMatch()
+
+  const handlePassword = () => {
+    history.push(`${url}/ganti-password`)
+  }
+
   return (
     <>
       <div className="relative w-full px-4 py-4 max-w-full">
@@ -12,8 +20,8 @@ export default function ProfileCard() {
       <div className="flex relative w-full px-4 max-w-full">
 
         <div className="mr-8">
-          <div className="w-28 h-28 pt-1.5">
-            <img className="" src="https://cdn.discordapp.com/attachments/798894344962441267/812754976102285322/pngaaa.com-864976.png" alt="foto profile" />
+          <div className="pt-1.5">
+            <img className="object-cover rounded-full w-28 h-28 " src="https://mojok.co/terminal/wp-content/uploads/2019/11/deddy-800x540.jpg" />
           </div>
         </div>
 
@@ -66,6 +74,7 @@ export default function ProfileCard() {
             <button
               className="text-blue-500 text-xs font-normal mr-3 px-3 py-2 rounded border-blue-500 border"
               type="button"
+              onClick={handlePassword}
             >
               Ubah Password
               </button>

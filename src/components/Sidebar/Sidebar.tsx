@@ -12,8 +12,8 @@ export default function Sidebar() {
         <div className="md:flex-col md:items-stretch md:min-h-full md:flex-no-wrap px-0 flex flex-wrap items-center justify-between w-full mx-auto">
          
           <div className="flex items-center w-56">
-            <div className="flex w-14 h-14">
-              <img className="" src="https://cdn.discordapp.com/attachments/798894344962441267/812754976102285322/pngaaa.com-864976.png" alt="foto profile" />
+            <div className="flex">
+              <img className="w-14 h-14 object-cover rounded-full" src="https://mojok.co/terminal/wp-content/uploads/2019/11/deddy-800x540.jpg" alt="foto profile" />
             </div>
             <div className="flex-row justify-center ml-2 py-4">
               <Link
