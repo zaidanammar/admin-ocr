@@ -34,7 +34,12 @@ export default function AdminLayout() {
         <HeaderStats />
 
         <div className="px-4 md:px-10 mx-auto w-full mt-5">
-          <h1 className="mb-5 text-blue-700 text-xs "> {(window.location.href.indexOf("/admin/dashboard") !== -1 ? "Dashboard" : "Dashboard/" + window.location.href.slice(28))}</h1>
+          <div className="flex items-center mb-4">
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.776855 6.66667H6.08316V0H0.776855V6.66667ZM0.776855 12H6.08316V8H0.776855V12ZM7.40974 12H12.716V5.33333H7.40974V12ZM7.40974 0V4H12.716V0H7.40974Z" fill="#0036A0" />
+            </svg>
+            <h1 className="ml-3 text-blue-700 text-xs "> {(window.location.href.indexOf("/admin/dashboard") !== -1 ? "Dashboard" : "Dashboard/" + window.location.href.slice(28))}</h1>
+          </div>
 
           <Switch>
             <Route path="/admin/dashboard" exact component={Dashboard} />
@@ -48,17 +53,11 @@ export default function AdminLayout() {
             <Route path="/admin/admin" exact component={Admin} />
             <Route path="/admin/superAdmin" exact component={SuperAdmin} />
             <Route path="/admin/profile" exact component={Profile} />
-            <Route path="/admin/profile/ganti-password" exact >
-              <div className="w-full xl:w-8/12 xl:mb-0 bg-white shadow-lg px-3 py-3">
-                <OldPassword />
-              </div>
-            </Route>
-            <Route path="/admin/profile/new-password" exact >
-              <div className="w-full xl:w-8/12 xl:mb-0 bg-white shadow-lg px-3 py-3">
-                <NewPassword />
-              </div>
-            </Route>
-            {/* <Redirect from="/admin" to="/admin/dashboard" /> */}
+            {/*sub route profile */}
+            <Route path="/admin/profile/ganti-password" exact component={OldPassword} />
+            <Route path="/admin/profile/new-password" exact component={NewPassword} />
+
+            <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
 
         </div>

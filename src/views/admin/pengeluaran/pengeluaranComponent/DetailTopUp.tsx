@@ -20,7 +20,7 @@ export default function DetailTopUp() {
                 </div>
                 <div className="w-1/4">
                     <div className="flex justify-between">
-                        <h1 className="font-normal text-base text-gray-300">: 42142</h1>
+                        <h1 className="font-normal text-base text-abuabu">: 42142</h1>
                     </div>
                     <div className="flex justify-between">
                         <h1 className="font-normal text-base">: Joko Susilo</h1>
@@ -32,15 +32,15 @@ export default function DetailTopUp() {
             </div>
             <div className="grid md:grid-cols-3 gap-6 my-3">
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">200</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">200</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Top Up</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-red-400 font-semibold text-2xl font-sans">40</h1>
+                    <h1 className="text-softPink font-semibold text-2xl font-sans">40</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Saldo Saat Ini</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">20</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">20</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Saldo Minimum</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
@@ -71,7 +71,7 @@ export default function DetailTopUp() {
             </div>
 
             <div className="flex justify-center">
-                <button className="bg-blue-900 py-1 px-7 w-44 rounded mt-10  mb-14 text-2xl font-semibold text-white uppercase">
+                <button className="bg-biru py-0.5 px-7 w-44 rounded mt-10  mb-14 text-2xl font-semibold text-white uppercase">
                     Top Up
                 </button>
             </div>

@@ -2,7 +2,14 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        biru: '#0036A0',
+        abuabu: '#A8A8A8',
+        hijauTosca: '#59D185',
+        softPink: '#FD8C8C'
+      }
+    },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
     }

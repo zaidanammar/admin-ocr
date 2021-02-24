@@ -18,7 +18,7 @@ export default function DetailPengeluaran() {
                 </div>
                 <div className="w-1/4">
                     <div className="flex justify-between">
-                        <h1 className="font-normal text-base text-gray-300">: 42142</h1>
+                        <h1 className="font-normal text-base text-abuabu">: 42142</h1>
                     </div>
                     <div className="flex justify-between">
                         <h1 className="font-normal text-base">: Joko Susilo</h1>
@@ -27,51 +27,51 @@ export default function DetailPengeluaran() {
             </div>
             <div className="grid md:grid-cols-3 gap-6 my-3">
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-blue-900 font-semibold text-2xl font-sans">200</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">200</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Jumlah Driver</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-blue-900 font-semibold text-2xl font-sans">40</h1>
+                    <h1 className="text-softPink font-semibold text-2xl font-sans">40</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Jumlah PIC</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-blue-900 font-semibold text-2xl font-sans">20</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">20</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Jumlah Super PIC</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-blue-900 font-semibold text-2xl font-sans">50</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">50</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Jumlah Driver di Top Up</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-blue-900 font-semibold text-2xl font-sans">15</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">15</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Jumlah PIC di Handle</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-blue-900 font-semibold text-2xl font-sans">5</h1>
+                    <h1 className="text-hijauTosca font-semibold text-2xl font-sans">5</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Jumlah Super PIC di Handle</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">Rp.10.000.000</h1>
+                    <h1 className="font-semibold text-2xl font-sans">Rp.10.000.000</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Total Top Up Bulan Ini</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">Rp.2.000.000</h1>
+                    <h1 className="font-semibold text-2xl font-sans">Rp.2.000.000</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Total Extra Top Up Bulan Ini</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">Rp.2.000.000</h1>
+                    <h1 className="font-semibold text-2xl font-sans">Rp.2.000.000</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Total Top Up Tanpa Handle</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">Rp.2.000.000</h1>
+                    <h1 className="text-biru font-semibold text-2xl font-sans">Rp.2.000.000</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Total Top Up Tanpa Handle</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">Rp.2.000.000</h1>
+                    <h1 className="text-biru font-semibold text-2xl font-sans">Rp.2.000.000</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Total Top Up Tanpa Handle</h1>
                 </div>
                 <div className="border-blue-100 border h-24 flex flex-col items-center justify-center">
-                    <h1 className="text-green-400 font-semibold text-2xl font-sans">Rp.2.000.000</h1>
+                    <h1 className="text-biru font-semibold text-2xl font-sans">Rp.2.000.000</h1>
                     <h1 className="font-normal text-xs mt-2 font-sans">Total Top Up Tanpa Handle</h1>
                 </div>
             </div>
