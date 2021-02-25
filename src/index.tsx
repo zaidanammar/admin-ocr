@@ -12,10 +12,8 @@ import AdminLayout from './layout/AdminLayout';
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      {/* add routes with layouts */}
       <Route path="/admin" component={AdminLayout} />
       {/* <Route path="/auth" component={Auth} /> */}
-      {/* add redirect for first page */}
       <Redirect from="*" to="/admin/dashboard" />
     </Switch>
   </BrowserRouter>,

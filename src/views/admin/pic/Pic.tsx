@@ -2,19 +2,15 @@ import React from "react";
 
 // components
 
-// import CardLineChart from "../../components/Cards/CardLineChart";
-// import CardBarChart from "../../components/Cards/CardBarChart";
-import CardPageVisits from "./profile/profileComponents/ProfileCard";
-import CardSocialTraffic from "../../components/Cards/CardSocialTraffic";
 
-export default function SuperAdmin() {
+export default function Pic() {
   return (
     <>
       {/* <div className="flex flex-wrap mx-auto mt-36 bg-pink-600"> */}
       {/* <h1 className="mt-48 text-blue-700">ahlo</h1> */}
         <div className="w-full xl:w-8/12 xl:mb-0 bg-purple-600 mx-auto px-3 py-3">
           {/* <CardPageVisits /> */}
-          <h1>Super Admin</h1>
+          <h1>PIC</h1>
         </div>
       {/* </div> */}
     </>

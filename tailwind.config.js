@@ -8,6 +8,9 @@ module.exports = {
         abuabu: '#A8A8A8',
         hijauTosca: '#59D185',
         softPink: '#FD8C8C'
+      },
+      fontSize: {
+        xxs: '10px'
       }
     },
     fontFamily: {
