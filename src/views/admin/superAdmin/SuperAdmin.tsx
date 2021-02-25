@@ -6,13 +6,11 @@ import React from "react";
 export default function SuperAdmin() {
   return (
     <>
-      {/* <div className="flex flex-wrap mx-auto mt-36 bg-pink-600"> */}
-      {/* <h1 className="mt-48 text-blue-700">ahlo</h1> */}
-        <div className="w-full xl:w-8/12 xl:mb-0 bg-purple-600 mx-auto px-3 py-3">
-          {/* <CardPageVisits /> */}
+      <div className="w-full xl:w-full xl:mb-10 bg-white shadow-lg px-7 py-5 ">
+        <div className="font-medium text-base mb-3">
           <h1>Super Admin</h1>
         </div>
-      {/* </div> */}
+      </div>
     </>
   );
 }
