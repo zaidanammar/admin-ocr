@@ -23,6 +23,7 @@ import Profile from "../views/admin/profile/Profile";
 import OldPassword from "../views/admin/profile/profileComponents/profileSubCard/OldPassword";
 import NewPassword from "../views/admin/profile/profileComponents/profileSubCard/NewPassword";
 
+import Table from '../Table'
 
 export default function AdminLayout() {
 
@@ -44,7 +45,7 @@ export default function AdminLayout() {
           <Switch>
             <Route path="/admin/dashboard" exact component={Dashboard} />
             <Route path="/admin/pengeluaran" exact component={Pengeluaran} />
-            <Route path="/admin/absensi" exact component={Absensi} />
+            <Route path="/admin/absensi" exact component={Table} />
             <Route path="/admin/notifikasi" exact component={Notifikasi} />
             <Route path="/admin/laporan" exact component={Laporan} />
             <Route path="/admin/driver" exact component={Driver} />
