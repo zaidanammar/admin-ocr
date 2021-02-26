@@ -10,6 +10,7 @@ import TableRow from '@material-ui/core/TableRow';
 import TableSortLabel from '@material-ui/core/TableSortLabel';
 import Paper from '@material-ui/core/Paper';
 import { Toolbar } from '@material-ui/core';
+import { useHistory, useRouteMatch } from "react-router-dom";
 
 interface Data {
     id: number;
@@ -166,6 +167,8 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 export default function EnhancedTable() {
+    const history = useHistory()
+    const { url } = useRouteMatch()
     const classes = useStyles();
     const [order, setOrder] = React.useState<Order>('asc');
     const [orderBy, setOrderBy] = React.useState<keyof Data>('id');
@@ -199,7 +202,7 @@ export default function EnhancedTable() {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
     };
-
+    
     // const handleSearch = (e) => {
     //     let target = e.target
 
@@ -216,6 +219,14 @@ export default function EnhancedTable() {
     //         }
     //     })
     // }
+
+    const handleBtnText = (row:any) => {
+        history.push(`${url}/superpic-text/${row.id}`)
+    }
+
+    const handleBtnMessage = (row:any) => {
+        history.push(`${url}/superpic-message/${row.id}`)
+    }
 
     const emptyRows = rowsPerPage - Math.min(rowsPerPage, dummy.length - page * rowsPerPage);
 
@@ -263,13 +274,13 @@ export default function EnhancedTable() {
                                         <StyledTableCell align="right">{row.slug}</StyledTableCell>
                                         <StyledTableCell padding="none">
                                             <div className="flex justify-center mt-6">
-                                            <button className="flex items-center bg-biru rounded py-0.5 px-5 -mt-5 font-medium text-white text-xxs mr-3">
+                                            <button onClick={() => handleBtnText(row)} className="flex items-center bg-biru rounded py-0.5 px-5 -mt-5 font-medium text-white text-xxs mr-3">
                                                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M9.16634 0.833344L6.24967 9.16668L4.58301 5.41668L0.833008 3.75001L9.16634 0.833344Z" stroke="white" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round" />
                                                 </svg>
                                                 <h1 className="ml-3">Kirim Pesan</h1>
                                             </button>
-                                            <button className="flex items-center border-biru border rounded py-0.5 px-5 -mt-5 font-medium text-biru text-xxs">
+                                            <button onClick={() => handleBtnMessage(row)} className="flex items-center border-biru border rounded py-0.5 px-5 -mt-5 font-medium text-biru text-xxs">
                                                 <h1>Lihat Pesan</h1>
                                             </button>
                                             </div>

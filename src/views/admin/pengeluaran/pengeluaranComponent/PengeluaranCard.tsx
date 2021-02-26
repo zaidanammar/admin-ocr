@@ -16,7 +16,6 @@ export default function PengeluaranCard() {
         } else {
             setFlag('pengeluaran')
         }
-        console.log(flag)
     }
 
     return (

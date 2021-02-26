@@ -2,24 +2,47 @@ import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 
 // components
-
 import Sidebar from "../components/Sidebar/Sidebar";
 import HeaderStats from '../components/headers/HeaderStats'
 
-// views
-
+// dashboard
 import Dashboard from "../views/admin/dashboard/Dashboard";
-import Pengeluaran from "../views/admin/pengeluaran/Pengeluaran";
-import Absensi from "../views/admin/absensi/Absensi";
-import Notifikasi from "../views/admin/notifikasi/Notifikasi";
-import Laporan from "../views/admin/laporan/Laporan";
-import Driver from "../views/admin/driver/Driver";
-import Pic from "../views/admin/pic/Pic";
-import Superpic from "../views/admin/superpic/Superpic";
-import Admin from "../views/admin/admin/Admin";
-import SuperAdmin from "../views/admin/superAdmin/SuperAdmin";
-import Profile from "../views/admin/profile/Profile";
 
+// pengeluaran
+import Pengeluaran from "../views/admin/pengeluaran/Pengeluaran";
+
+// absensi
+import Absensi from "../views/admin/absensi/Absensi";
+
+// notifikasi
+import Notifikasi from "../views/admin/notifikasi/Notifikasi";
+
+// laporan
+import Laporan from "../views/admin/laporan/Laporan";
+
+// driver
+import Driver from "../views/admin/driver/Driver";
+import DriverText from '../views/admin/driver/driverComponent/driverTableComponent/DriverText'
+import DriverMessage from '../views/admin/driver/driverComponent/driverTableComponent/DriverMessage'
+
+// pic
+import Pic from "../views/admin/pic/Pic";
+import PicText from "../views/admin/pic/picComponent/picTableComponent/PicText";
+import PicMessage from "../views/admin/pic/picComponent/picTableComponent/PicMessage";
+
+// superpic
+import Superpic from "../views/admin/superpic/Superpic";
+import SuperpicText from "../views/admin/superpic/superpicComponent/superPicTableComponent/SuperPicText";
+import SuperpicMessage from "../views/admin/superpic/superpicComponent/superPicTableComponent/SuperPicMessage";
+
+// admin
+import Admin from "../views/admin/admin/Admin";
+
+// super admin
+import SuperAdmin from "../views/admin/superAdmin/SuperAdmin";
+
+// profile
+import Profile from "../views/admin/profile/Profile";
 import OldPassword from "../views/admin/profile/profileComponents/profileSubCard/OldPassword";
 import NewPassword from "../views/admin/profile/profileComponents/profileSubCard/NewPassword";
 
@@ -47,16 +70,31 @@ export default function AdminLayout() {
             <Route path="/admin/absensi" exact component={Absensi} />
             <Route path="/admin/notifikasi" exact component={Notifikasi} />
             <Route path="/admin/laporan" exact component={Laporan} />
+            
+            {/*route driver*/}
             <Route path="/admin/driver" exact component={Driver} />
+            <Route path="/admin/driver/driver-text/:id" component={DriverText} />
+            <Route path="/admin/driver/driver-message/:id" component={DriverMessage} />
+
+            {/*route PIC*/}
             <Route path="/admin/pic" exact component={Pic} />
+            <Route path="/admin/pic/pic-text/:id" exact component={PicText} />
+            <Route path="/admin/pic/pic-message/:id" exact component={PicMessage} />
+            
+
+            {/*route super Pic*/}
             <Route path="/admin/superpic" exact component={Superpic} />
+            <Route path="/admin/superpic/superpic-text/:id" exact component={SuperpicText} />
+            <Route path="/admin/superpic/superpic-message/:id" exact component={SuperpicMessage} />
+            
             <Route path="/admin/admin" exact component={Admin} />
+            
             <Route path="/admin/superAdmin" exact component={SuperAdmin} />
+            
+            {/*route profile */}
             <Route path="/admin/profile" exact component={Profile} />
-            {/*sub route profile */}
             <Route path="/admin/profile/ganti-password" exact component={OldPassword} />
             <Route path="/admin/profile/new-password" exact component={NewPassword} />
-
             <Redirect from="/admin" to="/admin/dashboard" />
           </Switch>
 

@@ -6,6 +6,6 @@ import PengeluaranCard from "../pengeluaran/pengeluaranComponent/PengeluaranCard
 
 export default function Pengeluaran() {
   return (
-        <PengeluaranCard />
+    <PengeluaranCard />
   );
 }
