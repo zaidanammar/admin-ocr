@@ -175,7 +175,7 @@ export default function EnhancedTable() {
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     const [dummy, setDummy] = useState<any>([])
-    // const [filterFn, SetFilterFn] = useState({ fn: items => { return items } })
+    const [filterFn, SetFilterFn] = useState<any>({ fn: (items: any) => { return items } })
 
     useEffect(() => {
         fetchData()
@@ -202,22 +202,24 @@ export default function EnhancedTable() {
         setPage(0);
     };
 
-    // const handleSearch = (e) => {
-    //     let target = e.target
+    const handleSearch = (e: any) => {
+        let target = e.target
 
-    //     SetFilterFn({
-    //         fn: items => {
+        SetFilterFn({
+            fn: (items: any[]) => {
 
-    //             if (target.value === "") {
-    //                 return items
-    //             } else {
-    //                 return items.filter(el => (
-    //                     el.id.toString().includes(target.value.toLowerCase()) || el.name.toLowerCase().includes(target.value.toLowerCase())
-    //                 ))
-    //             }
-    //         }
-    //     })
-    // }
+                if (target.value === "") {
+                    return items
+                } else {
+                    return items.filter(function (el:any) {
+                            return (
+                                el.id.toString().includes(target.value.toLowerCase()) || el.name.toLowerCase().includes(target.value.toLowerCase())
+                            );
+                        })
+                }
+            }
+        })
+    }
 
     const handleBtnText = (row:any) => {
         history.push(`${url}/driver-text/${row.id}`)
@@ -233,7 +235,7 @@ export default function EnhancedTable() {
         <div className={classes.root}>
             {/* <Paper className={classes.paper}> */}
             <Toolbar>
-                <input placeholder="Cari kode driver atau nama driver" className={classes.searchInput}></input>
+                <input placeholder="Cari kode driver atau nama driver" className={classes.searchInput} onChange={handleSearch}></input>
             </Toolbar>
             <TableContainer>
                 <Table
@@ -250,7 +252,7 @@ export default function EnhancedTable() {
 
                     />
                     <TableBody>
-                        {stableSort(dummy, getComparator(order, orderBy))
+                        {stableSort(filterFn.fn(dummy), getComparator(order, orderBy))
                             .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                             .map((row: any, index) => {
                                 const labelId = `enhanced-table-checkbox-${index}`;

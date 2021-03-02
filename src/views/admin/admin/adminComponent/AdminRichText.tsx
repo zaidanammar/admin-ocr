@@ -12,14 +12,14 @@ export default function AdminRichText() {
             quill.on('text-change', (delta, source) => {
                 //    setMessage(delta.ops)
                 // console.log(delta.ops)
-                if (delta.ops?.[0].insert) {
-                    console.log(delta.ops?.[0].insert)
-                    setMessage(delta.ops?.[0].insert)
-                } else {
-                    console.log(delta.ops?.[1].insert)
-                    setMessage(delta.ops?.[1].insert)
-                }
-                console.log(source)
+                // if (delta.ops?.[0].insert) {
+                //     console.log(delta.ops?.[0].insert)
+                //     setMessage(delta.ops?.[0].insert)
+                // } else {
+                //     console.log(delta.ops?.[1].insert)
+                //     setMessage(delta.ops?.[1].insert)
+                // }
+                // console.log(source)
             });
         }
     }, [quill]);
