@@ -9,7 +9,7 @@ export default function Driver() {
     <>
       <div className="w-full xl:w-full xl:mb-10 bg-white shadow-lg px-7 py-5 ">
         <div className="font-medium text-base mb-3">
-          <h1>Driver HEVAT</h1>
+          <h1>Driver HEVAT UTMA</h1>
         </div>
         <DriverTable />
       </div>
